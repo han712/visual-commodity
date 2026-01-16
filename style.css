@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+html, body, [class*="st-"] { 
+    font-family: 'Inter', sans-serif; 
+    scroll-behavior: smooth;
+}
+
+.stApp { 
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); 
+    color: #e2e8f0; 
+}
+
+.main-header { 
+    font-size: 2.8rem; 
+    font-weight: 800; 
+    color: #ffffff; 
+    text-align: center; 
+    padding: 2.5rem 1rem; 
+    background: linear-gradient(135deg, #10b981 0%, #3b82f6 50%, #6366f1 100%); 
+    border-radius: 16px; 
+    margin-bottom: 2rem; 
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.main-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.section-header { 
+    font-size: 1.9rem; 
+    font-weight: 700; 
+    color: #93c5fd; 
+    margin-top: 3rem; 
+    margin-bottom: 1.5rem; 
+    border-bottom: 3px solid #10b981; 
+    padding-bottom: 0.8rem;
+    position: relative;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #10b981, #3b82f6);
+    border-radius: 2px;
+}
+
+.metric-card { 
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border: 1px solid rgba(148, 163, 184, 0.2); 
+    padding: 2rem 1.5rem; 
+    border-radius: 16px; 
+    text-align: center; 
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #10b981, #3b82f6, #6366f1);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.metric-card:hover::before {
+    transform: scaleX(1);
+}
+
+.metric-card:hover { 
+    transform: translateY(-8px) scale(1.02); 
+    box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.4);
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+}
+
+.metric-card h3 { 
+    font-size: 1.1rem; 
+    color: #cbd5e1; 
+    margin-bottom: 0.8rem; 
+    font-weight: 500; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.metric-card p { 
+    font-size: 2.2rem; 
+    font-weight: 800; 
+    color: #ffffff; 
+    margin: 0;
+    background: linear-gradient(135deg, #10b981, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.insight-box { 
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(51, 65, 85, 0.6) 100%);
+    border-left: 5px solid #3b82f6; 
+    padding: 1.5rem; 
+    border-radius: 12px; 
+    margin-top: 1.5rem; 
+    font-size: 0.95rem; 
+    line-height: 1.7;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.insight-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2);
+}
+
+.insight-box h4 { 
+    color: #60a5fa; 
+    margin-top: 0; 
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.insight-box ul { 
+    padding-left: 20px; 
+    margin-bottom: 0; 
+}
+
+.insight-box li { 
+    margin-bottom: 0.6rem; 
+    position: relative;
+}
+
+.insight-box li::before {
+    content: '→';
+    color: #10b981;
+    font-weight: bold;
+    position: absolute;
+    left: -20px;
+}
+
+.tokopedia-card { 
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border: 1px solid rgba(148, 163, 184, 0.2); 
+    padding: 1.2rem; 
+    border-radius: 12px; 
+    margin-bottom: 1rem; 
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tokopedia-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #10b981, #3b82f6);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.tokopedia-card:hover::before {
+    transform: scaleY(1);
+}
+
+.tokopedia-card:hover {
+    transform: translateX(8px);
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+}
+
+.profit-highlight { 
+    color: #34d399; 
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(52, 211, 153, 0.3);
+}
+
+.css-1d391kg { 
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    border-right: 2px solid rgba(16, 185, 129, 0.3); 
+}
+
+.stTabs [data-baseweb="tab-list"] { 
+    gap: 8px;
+    background: rgba(30, 41, 59, 0.5);
+    padding: 8px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.stTabs [data-baseweb="tab"] { 
+    height: 50px; 
+    white-space: pre-wrap; 
+    background: rgba(30, 41, 59, 0.8);
+    border-radius: 8px; 
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background: rgba(51, 65, 85, 0.8);
+    color: #e2e8f0;
+}
+
+.stTabs [aria-selected="true"] { 
+    background: linear-gradient(135deg, #10b981, #3b82f6) !important; 
+    color: white !important; 
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.competition-level {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.competition-high { background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid #ef4444; }
+.competition-medium { background: rgba(245, 158, 11, 0.2); color: #fcd34d; border: 1px solid #f59e0b; }
+.competition-low { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid #10b981; }
+
+.noise-card { 
+    background: linear-gradient(135deg, #4b5563 0%, #1f2937 100%);
+    border-left: 5px solid #ef4444;
+    padding: 1.2rem; 
+    border-radius: 12px; 
+    margin-bottom: 1rem; 
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.noise-keyword-tag {
+    display: inline-block;
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    margin: 2px;
+    border: 1px solid #ef4444;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .main-header { font-size: 2rem; padding: 1.5rem 1rem; }
+    .metric-card { padding: 1.5rem 1rem; }
+    .metric-card p { font-size: 1.8rem; }
+}
